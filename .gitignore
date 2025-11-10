@@ -1,9 +1,127 @@
+
+!memory/agents/README.md
+!memory/sessions/README.md
+# Claude Flow generated files
+# Database
+# Distribution / packaging
+# Documentation builds
+# Environment files
+# IDE
+# Jupyter Notebook
+# Linting
+# Logs
+# Model files (large files)
+# OS
+# Project specific
+# Python
+# Removed Windows wrapper files per user request
+# Security
+# Temporary files
+# Testing
+# Type checking
+# Upload directories
+# Virtual environments
+*$py.class
+*.cover
+*.crt
+*.db
+*.db-journal
+*.db-wal
+*.egg
+*.egg-info
+*.egg-info/
+*.h5
+*.key
+*.log
+*.onnx
+*.pem
+*.ply
+*.pt
+*.pth
+*.py[cod]
+*.pyc
+*.so
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite3
+*.swo
+*.swp
+*.tmp
+*~
+.DS_Store
+.Python
+.anny/
+.cache
+.claude-flow/
+.claude/settings.local.json
+.coverage
+.coverage.*
+.dmypy.json
+.eggs/
+.env
+.env.*.local
+.env.local
+.hive-mind/
+.idea/
+.installed.cfg
+.ipynb_checkpoints
+.mcp.json
+.mypy_cache/
+.nox/
+.pyre/
+.pytest_cache/
+.pytype/
+.ruff_cache/
+.swarm/
+.tox/
+.venv
+.vscode/
+/tmp/anny-uploads/
+ENV/
+MANIFEST
+Thumbs.db
 __pycache__/
 build/
+claude-flow
+claude-flow.config.json
+coordination/
+coordination/memory_bank/*
+coordination/orchestration/*
+coordination/subtasks/*
+coverage.xml
+develop-eggs/
 dist/
-.vscode/
-.anny/
-*.egg-info
+dmypy.json
+docs/_build/
+docs/_static/
+docs/_templates/
 docs/build/
-*.ply
-
+downloads/
+eggs/
+env/
+hive-mind-prompt-*.txt
+htmlcov/
+lib/
+lib64/
+logs/
+memory/
+memory/agents/*
+memory/agents/*.json
+memory/claude-flow-data.json
+memory/sessions/*
+memory/sessions/*.json
+migrations/
+models/*.pt
+models/*.pth
+nosetests.xml
+parts/
+sdist/
+secrets/
+share/python-wheels/
+temp/
+tmp/
+uploads/
+var/
+venv/
+wheels/

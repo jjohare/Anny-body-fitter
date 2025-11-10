@@ -1,0 +1,32 @@
+# Test dependencies for Anny Body Fitter
+# Install with: pip install -r tests/requirements.txt
+
+# Core testing framework
+pytest>=7.4.0
+pytest-cov>=4.1.0          # Coverage reporting
+pytest-mock>=3.11.1        # Enhanced mocking
+pytest-xdist>=3.3.1        # Parallel test execution
+pytest-timeout>=2.1.0      # Test timeouts
+pytest-benchmark>=4.0.0    # Performance benchmarking
+
+# Mocking and testing utilities
+unittest-mock>=1.5.0
+responses>=0.23.0          # HTTP request mocking
+
+# Coverage and reporting
+coverage[toml]>=7.2.0
+coverage-badge>=1.1.0
+
+# Code quality
+pytest-clarity>=1.0.1      # Better assertion messages
+pytest-sugar>=0.9.7        # Better test output
+
+# Performance profiling
+pytest-profiling>=1.7.0
+memory-profiler>=0.61.0
+
+# Optional: Visual regression testing
+# pytest-mpl>=0.16.0       # Matplotlib plot comparison
+
+# Optional: Property-based testing
+# hypothesis>=6.82.0       # Property-based testing

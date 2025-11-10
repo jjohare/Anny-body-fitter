@@ -1,0 +1,133 @@
+{
+  "landmark_detection": {
+    "front_view.png": {
+      "expected_landmarks": {
+        "nose": {"x": 320, "y": 100, "tolerance": 20},
+        "left_shoulder": {"x": 250, "y": 170, "tolerance": 15},
+        "right_shoulder": {"x": 390, "y": 170, "tolerance": 15},
+        "left_hip": {"x": 260, "y": 300, "tolerance": 15},
+        "right_hip": {"x": 380, "y": 300, "tolerance": 15},
+        "left_knee": {"x": 287, "y": 400, "tolerance": 20},
+        "right_knee": {"x": 352, "y": 400, "tolerance": 20}
+      },
+      "confidence_threshold": 0.5,
+      "notes": "Front view should detect all major body landmarks"
+    },
+    "side_view.png": {
+      "expected_landmarks": {
+        "nose": {"x": 390, "y": 90, "tolerance": 20},
+        "shoulder": {"x": 355, "y": 150, "tolerance": 15},
+        "hip": {"x": 330, "y": 300, "tolerance": 15},
+        "knee": {"x": 340, "y": 400, "tolerance": 20}
+      },
+      "confidence_threshold": 0.5,
+      "notes": "Side view shows single profile landmarks"
+    },
+    "back_view.png": {
+      "expected_landmarks": {
+        "left_shoulder": {"x": 250, "y": 170, "tolerance": 15},
+        "right_shoulder": {"x": 390, "y": 170, "tolerance": 15},
+        "left_hip": {"x": 265, "y": 300, "tolerance": 15},
+        "right_hip": {"x": 375, "y": 300, "tolerance": 15}
+      },
+      "confidence_threshold": 0.5,
+      "notes": "Back view may have lower confidence for some landmarks"
+    },
+    "three_quarter_view.png": {
+      "expected_landmarks": {
+        "nose": {"x": 335, "y": 95, "tolerance": 25},
+        "left_shoulder": {"x": 270, "y": 160, "tolerance": 20},
+        "right_shoulder": {"x": 390, "y": 165, "tolerance": 20},
+        "left_hip": {"x": 280, "y": 295, "tolerance": 20},
+        "right_hip": {"x": 375, "y": 290, "tolerance": 20}
+      },
+      "confidence_threshold": 0.4,
+      "notes": "3/4 view may have varying confidence due to angle"
+    },
+    "cropped_view.png": {
+      "expected_landmarks": {
+        "nose": {"x": 320, "y": 100, "tolerance": 30},
+        "left_shoulder": {"x": 220, "y": 200, "tolerance": 20},
+        "right_shoulder": {"x": 420, "y": 200, "tolerance": 20}
+      },
+      "confidence_threshold": 0.6,
+      "notes": "Cropped view only shows upper body landmarks"
+    }
+  },
+  "body_measurements": {
+    "front_view.png": {
+      "shoulder_width_px": 140,
+      "torso_height_px": 130,
+      "hip_width_px": 120,
+      "total_height_px": 410,
+      "measurement_tolerance_px": 10,
+      "notes": "Pixel measurements from synthetic image"
+    },
+    "side_view.png": {
+      "torso_depth_px": 60,
+      "torso_height_px": 150,
+      "total_height_px": 410,
+      "measurement_tolerance_px": 15,
+      "notes": "Profile measurements"
+    }
+  },
+  "phenotype_fitting": {
+    "test_subject_1": {
+      "expected_shape_params": {
+        "num_betas": 10,
+        "beta_range": [-3.0, 3.0],
+        "notes": "SMPL shape parameters typically in range [-3, 3]"
+      },
+      "expected_pose_params": {
+        "num_pose_params": 72,
+        "notes": "SMPL pose has 24 joints × 3 axis-angle values = 72 params"
+      },
+      "expected_pve_cm": {
+        "min": 0.5,
+        "max": 5.0,
+        "target": 2.0,
+        "notes": "Per-vertex error in centimeters, lower is better"
+      },
+      "expected_fit_quality": {
+        "measurement_error_percent": 5.0,
+        "landmark_reprojection_error_px": 10.0,
+        "notes": "Quality metrics for successful fit"
+      }
+    },
+    "test_subject_2": {
+      "expected_shape_params": {
+        "num_betas": 10,
+        "beta_range": [-3.0, 3.0]
+      },
+      "expected_pose_params": {
+        "num_pose_params": 72
+      },
+      "expected_pve_cm": {
+        "min": 0.5,
+        "max": 5.0,
+        "target": 2.0
+      }
+    }
+  },
+  "edge_cases": {
+    "missing_landmarks": {
+      "acceptable_missing_rate": 0.2,
+      "notes": "Up to 20% of landmarks can be missing and still proceed"
+    },
+    "low_confidence_detection": {
+      "minimum_average_confidence": 0.3,
+      "notes": "If average confidence below 0.3, fitting may fail"
+    },
+    "extreme_measurements": {
+      "height_range_cm": [140.0, 210.0],
+      "weight_range_kg": [40.0, 150.0],
+      "notes": "Acceptable ranges for human measurements"
+    }
+  },
+  "regression_thresholds": {
+    "landmark_detection_success_rate": 0.85,
+    "fitting_convergence_rate": 0.90,
+    "measurement_accuracy_threshold_percent": 8.0,
+    "notes": "Minimum acceptable success rates for regression tests"
+  }
+}

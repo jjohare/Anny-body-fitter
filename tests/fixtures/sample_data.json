@@ -1,0 +1,82 @@
+{
+  "test_subject_1": {
+    "name": "Test Subject Alpha",
+    "dob": "1990-01-15",
+    "gender": "male",
+    "height_cm": 175.0,
+    "weight_kg": 70.0,
+    "measurements": {
+      "shoulder_width": 45.0,
+      "chest_circumference": 95.0,
+      "waist_circumference": 80.0,
+      "hip_circumference": 92.0,
+      "neck_circumference": 38.0,
+      "arm_length": 60.0,
+      "leg_length": 90.0,
+      "inseam": 80.0
+    },
+    "notes": "Standard male build for testing front/back views"
+  },
+  "test_subject_2": {
+    "name": "Test Subject Beta",
+    "dob": "1985-06-22",
+    "gender": "female",
+    "height_cm": 165.0,
+    "weight_kg": 60.0,
+    "measurements": {
+      "shoulder_width": 38.0,
+      "chest_circumference": 88.0,
+      "waist_circumference": 68.0,
+      "hip_circumference": 95.0,
+      "neck_circumference": 32.0,
+      "arm_length": 56.0,
+      "leg_length": 85.0,
+      "inseam": 75.0
+    },
+    "notes": "Standard female build for testing side/3-4 views"
+  },
+  "test_subject_3": {
+    "name": "Test Subject Gamma",
+    "dob": "1995-03-10",
+    "gender": "male",
+    "height_cm": 185.0,
+    "weight_kg": 85.0,
+    "measurements": {
+      "shoulder_width": 48.0,
+      "chest_circumference": 102.0,
+      "waist_circumference": 85.0,
+      "hip_circumference": 98.0,
+      "neck_circumference": 40.0,
+      "arm_length": 63.0,
+      "leg_length": 95.0,
+      "inseam": 85.0
+    },
+    "notes": "Taller athletic male build for edge case testing"
+  },
+  "test_subject_4": {
+    "name": "Test Subject Delta",
+    "dob": "1988-11-05",
+    "gender": "female",
+    "height_cm": 158.0,
+    "weight_kg": 52.0,
+    "measurements": {
+      "shoulder_width": 36.0,
+      "chest_circumference": 82.0,
+      "waist_circumference": 64.0,
+      "hip_circumference": 88.0,
+      "neck_circumference": 30.0,
+      "arm_length": 54.0,
+      "leg_length": 80.0,
+      "inseam": 70.0
+    },
+    "notes": "Petite female build for edge case testing"
+  },
+  "test_subject_minimal": {
+    "name": "Minimal Test Subject",
+    "dob": "2000-01-01",
+    "gender": "other",
+    "height_cm": 170.0,
+    "weight_kg": 65.0,
+    "notes": "Subject with minimal data for testing required fields only"
+  }
+}
